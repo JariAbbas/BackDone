@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.19.0.v202502081713</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="startrange" id="5">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="endrange" id="6">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="startrange2" id="7">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="endrange2" id="8">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.ibm.db2.jcc.DB2Driver</property>
+            <property name="odaURL">jdbc:db2://10.51.41.23:50000/lbsdb</property>
+            <property name="odaUser">bahl</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">YkBobEAxMjM0</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="LoanRangeLoans" id="9">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">LOANID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">LOANID</text-property>
+                    <text-property name="heading">LOANID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BRANCHCODE</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">BRANCHCODE</text-property>
+                    <text-property name="heading">BRANCHCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEALAMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">DEALAMOUNT</text-property>
+                    <text-property name="heading">DEALAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STATUSTEXT</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">STATUSTEXT</text-property>
+                    <text-property name="heading">STATUSTEXT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOANDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">LOANDATE</text-property>
+                    <text-property name="heading">LOANDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSACTIONCODE</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TRANSACTIONCODE</text-property>
+                    <text-property name="heading">TRANSACTIONCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DESCRIPTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">DESCRIPTION</text-property>
+                    <text-property name="heading">DESCRIPTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FORMATTEDACCOUNTNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FORMATTEDACCOUNTNUMBER</text-property>
+                    <text-property name="heading">FORMATTEDACCOUNTNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOANTYPE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">LOANTYPE</text-property>
+                    <text-property name="heading">LOANTYPE</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">startrange</property>
+                    <property name="paramName">startrange</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">endrange</property>
+                    <property name="paramName">endrange</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">startrange2</property>
+                    <property name="paramName">startrange2</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">3</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">endrange2</property>
+                    <property name="paramName">endrange2</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                    <property name="position">4</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">LOANID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">BRANCHCODE</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DEALAMOUNT</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">STATUSTEXT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">LOANDATE</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TRANSACTIONCODE</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DESCRIPTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">FORMATTEDACCOUNTNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">LOANTYPE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">LOANID</property>
+                    <property name="nativeName">LOANID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">BRANCHCODE</property>
+                    <property name="nativeName">BRANCHCODE</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DEALAMOUNT</property>
+                    <property name="nativeName">DEALAMOUNT</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">STATUSTEXT</property>
+                    <property name="nativeName">STATUSTEXT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">LOANDATE</property>
+                    <property name="nativeName">LOANDATE</property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">91</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TRANSACTIONCODE</property>
+                    <property name="nativeName">TRANSACTIONCODE</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DESCRIPTION</property>
+                    <property name="nativeName">DESCRIPTION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">FORMATTEDACCOUNTNUMBER</property>
+                    <property name="nativeName">FORMATTEDACCOUNTNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">LOANTYPE</property>
+                    <property name="nativeName">LOANTYPE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[WITH CombinedData AS (
+    SELECT
+        LA.LoanID,
+        B.BranchCode,
+        CASE LA.Status
+            WHEN 7 THEN -LA.DEALAMOUNT
+            WHEN 8 THEN -LA.DEALAMOUNT
+            ELSE LA.DEALAMOUNT
+        END AS DEALAMOUNT,
+        CASE LA.Status
+            WHEN 9 THEN 'Authorized'
+            WHEN 1 THEN 'Unauthorized'
+            WHEN 2 THEN 'Unauthorized'
+            WHEN 7 THEN 'Unauthorized Recovery'
+            WHEN 8 THEN 'Recovered'
+            WHEN 987 THEN 'Rejected'
+            WHEN 0 THEN 'Unauthorized Cancellation'
+        END AS StatusText,
+        LA.GrantDate AS LoanDate,
+        CASE LA.Status
+            WHEN 9 THEN CAST(86036 AS INTEGER)
+            WHEN 1 THEN CAST(86036 AS INTEGER)
+            WHEN 2 THEN CAST(86036 AS INTEGER)
+            WHEN 7 THEN CAST(86036 AS INTEGER)
+            WHEN 8 THEN CAST(36091 AS INTEGER)
+            WHEN 987 THEN NULL
+            WHEN 0 THEN CAST(NULL AS INTEGER)
+            ELSE NULL
+        END AS TransactionCode,
+        CASE LA.Status
+            WHEN 9 THEN 'Authorized'
+            WHEN 1 THEN 'Unauthorized'
+            WHEN 2 THEN 'Unauthorized'
+            WHEN 7 THEN 'Unauthorized Recovery'
+            WHEN 8 THEN 'Recovered'
+            WHEN 987 THEN 'Rejected'
+            WHEN 0 THEN 'Unauthorized Cancellation'
+        END AS Description,
+        CASE
+            WHEN LENGTH(LA.CustomerNumber) = 13 AND LA.CustomerNumber LIKE '%%%%%%%%%%%'
+            THEN B.BranchCode || '-' ||
+                 SUBSTR(LA.CustomerNumber, 1, 4) || '-' ||
+                 SUBSTR(LA.CustomerNumber, 5, 6) || '-' ||
+                 SUBSTR(LA.CustomerNumber, 11, 2) || '-' ||
+                 SUBSTR(LA.CustomerNumber, 13, 1)
+            ELSE LA.CustomerNumber
+        END AS FormattedAccountNumber,
+        'Active Loan' AS LoanType,
+        1 AS SourceOrder
+    FROM
+        BAHL.LoanApplication LA
+    LEFT JOIN
+        BAHL.CustomerInfo CI ON LA.CustomerNumber = CI.CustomerNumber
+    LEFT JOIN
+        BAHL.Branches B ON CI.BranchCode = B.BranchCode
+    WHERE
+        LA.LoanID BETWEEN ? AND ?
+
+    UNION ALL
+
+    SELECT
+        CL.ORIGINALLOANID AS LoanID,
+        B.BranchCode,
+        CL.DealAmount AS DEALAMOUNT,
+        CASE CL.Status
+            WHEN 1 THEN 'Unauthorized Cancellation'
+            WHEN 9 THEN 'Cancelled'
+        END AS StatusText,
+        CL.GrantDate AS LoanDate,
+        CASE CL.Status
+            WHEN 1 THEN CAST(NULL AS INTEGER)
+            WHEN 9 THEN CAST(NULL AS INTEGER)
+        END AS TransactionCode,
+        CASE CL.Status
+            WHEN 1 THEN 'Unauthorized Cancellation'
+            WHEN 9 THEN 'Cancelled'
+        END AS Description,
+        CASE
+            WHEN LENGTH(CL.CustomerNumber) = 13 AND CL.CustomerNumber LIKE '%%%%%%%%%%%'
+            THEN B.BranchCode || '-' ||
+                 SUBSTR(CL.CustomerNumber, 1, 4) || '-' ||
+                 SUBSTR(CL.CustomerNumber, 5, 6) || '-' ||
+                 SUBSTR(CL.CustomerNumber, 11, 2) || '-' ||
+                 SUBSTR(CL.CustomerNumber, 13, 1)
+            ELSE CL.CustomerNumber
+        END AS FormattedAccountNumber,
+        'Cancelled Loan' AS LoanType,
+        2 AS SourceOrder
+    FROM
+        BAHL.CancelledLoan CL
+    LEFT JOIN
+        BAHL.CustomerInfo CI ON CL.CustomerNumber = CI.CustomerNumber
+    LEFT JOIN
+        BAHL.Branches B ON CI.BranchCode = B.BranchCode
+    WHERE
+        CL.CustomerNumber IN (SELECT CustomerNumber FROM BAHL.LoanApplication WHERE LoanID BETWEEN ? AND ?)
+        AND CL.Status IN (1, 9)
+),
+RankedData AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (PARTITION BY LoanID ORDER BY SourceOrder) AS rn
+    FROM
+        CombinedData
+)
+SELECT
+    LoanID,
+    BranchCode,
+    DEALAMOUNT,
+    StatusText,
+    LoanDate,
+    TransactionCode,
+    Description,
+    FormattedAccountNumber,
+    LoanType
+FROM
+    RankedData
+WHERE
+    rn = 1
+ORDER BY
+    LoanID]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LOANID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LOANID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LOANID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BRANCHCODE</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BRANCHCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BRANCHCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEALAMOUNT</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEALAMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEALAMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>17</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STATUSTEXT</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>25</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STATUSTEXT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STATUSTEXT</design:label>
+            <design:formattingHints>
+              <design:displaySize>25</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LOANDATE</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>91</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LOANDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LOANDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONCODE</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DESCRIPTION</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>25</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DESCRIPTION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DESCRIPTION</design:label>
+            <design:formattingHints>
+              <design:displaySize>25</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FORMATTEDACCOUNTNUMBER</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>28</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FORMATTEDACCOUNTNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FORMATTEDACCOUNTNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>28</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LOANTYPE</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>14</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LOANTYPE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LOANTYPE</design:label>
+            <design:formattingHints>
+              <design:displaySize>14</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <table id="10">
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">LoanRangeLoans</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">LOANID</property>
+                    <text-property name="displayName">LOANID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LOANID"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BRANCHCODE</property>
+                    <text-property name="displayName">BRANCHCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BRANCHCODE"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">DEALAMOUNT</property>
+                    <text-property name="displayName">DEALAMOUNT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DEALAMOUNT"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="name">STATUSTEXT</property>
+                    <text-property name="displayName">STATUSTEXT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["STATUSTEXT"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">LOANDATE</property>
+                    <text-property name="displayName">LOANDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LOANDATE"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">TRANSACTIONCODE</property>
+                    <text-property name="displayName">TRANSACTIONCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TRANSACTIONCODE"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">DESCRIPTION</property>
+                    <text-property name="displayName">DESCRIPTION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DESCRIPTION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">FORMATTEDACCOUNTNUMBER</property>
+                    <text-property name="displayName">FORMATTEDACCOUNTNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["FORMATTEDACCOUNTNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">LOANTYPE</property>
+                    <text-property name="displayName">LOANTYPE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LOANTYPE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="60">
+                <property name="width">1.34375in</property>
+            </column>
+            <column id="61">
+                <property name="width">2.2083333333333335in</property>
+            </column>
+            <column id="62">
+                <property name="width">1.5416666666666667in</property>
+            </column>
+            <column id="63">
+                <property name="width">1.125in</property>
+            </column>
+            <column id="64">
+                <property name="width">0.9479166666666666in</property>
+            </column>
+            <column id="65">
+                <property name="width">0.75in</property>
+            </column>
+            <header>
+                <row id="11">
+                    <property name="backgroundColor">#E5E9EE</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.3854166666666667in</property>
+                    <cell id="14">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="68">
+                            <text-property name="text">Loan ID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="16">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="27">
+                            <text-property name="text">Acc. #</text-property>
+                        </label>
+                    </cell>
+                    <cell id="18">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="17">
+                            <text-property name="text">Amount</text-property>
+                        </label>
+                    </cell>
+                    <cell id="20">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="19">
+                            <text-property name="text">Status</text-property>
+                        </label>
+                    </cell>
+                    <cell id="22">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="21">
+                            <text-property name="text">Date</text-property>
+                        </label>
+                    </cell>
+                    <cell id="24">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="23">
+                            <text-property name="text">Tran. Code</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="30">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.40625in</property>
+                    <cell id="33">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="69">
+                            <property name="resultSetColumn">LOANID</property>
+                        </data>
+                    </cell>
+                    <cell id="35">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="46">
+                            <property name="resultSetColumn">FORMATTEDACCOUNTNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="37">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="36">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="resultSetColumn">DEALAMOUNT</property>
+                        </data>
+                    </cell>
+                    <cell id="39">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="38">
+                            <property name="resultSetColumn">STATUSTEXT</property>
+                        </data>
+                    </cell>
+                    <cell id="41">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="40">
+                            <structure name="dateTimeFormat">
+                                <property name="category">Date Picker</property>
+                                <property name="pattern">yyyy-MM-dd</property>
+                            </structure>
+                            <property name="resultSetColumn">LOANDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="43">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="42">
+                            <property name="resultSetColumn">TRANSACTIONCODE</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="49">
+                    <property name="height">0.375in</property>
+                    <cell id="51"/>
+                    <cell id="52"/>
+                    <cell id="53"/>
+                    <cell id="54"/>
+                    <cell id="55"/>
+                    <cell id="56"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

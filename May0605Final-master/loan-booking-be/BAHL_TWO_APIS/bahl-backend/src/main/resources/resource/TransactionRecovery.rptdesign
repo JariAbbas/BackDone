@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.27" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.19.0.v202502081713</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="voucherNumber" id="72">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.ibm.db2.jcc.DB2Driver</property>
+            <property name="odaURL">jdbc:db2://10.51.41.23:50000/lbsdb</property>
+            <property name="odaUser">bahl</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">YkBobEAxMjM0</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="LoanBooking" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">TRANSACTIONCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSACTIONCODE</text-property>
+                    <text-property name="heading">TRANSACTIONCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VOUCHERNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">VOUCHERNUMBER</text-property>
+                    <text-property name="heading">VOUCHERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSACTIONNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TRANSACTIONNUMBER</text-property>
+                    <text-property name="heading">TRANSACTIONNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACCOUNTNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACCOUNTNUMBER</text-property>
+                    <text-property name="heading">ACCOUNTNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACCOUNTTITLE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACCOUNTTITLE</text-property>
+                    <text-property name="heading">ACCOUNTTITLE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CURRENCY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CURRENCY</text-property>
+                    <text-property name="heading">CURRENCY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEBITAMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">DEBITAMOUNT</text-property>
+                    <text-property name="heading">DEBITAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CREDITAMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CREDITAMOUNT</text-property>
+                    <text-property name="heading">CREDITAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSACTIONDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSACTIONDATE</text-property>
+                    <text-property name="heading">TRANSACTIONDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOANNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">LOANNUMBER</text-property>
+                    <text-property name="heading">LOANNUMBER</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">voucherNumberParam</property>
+                    <property name="paramName">voucherNumberParam</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">TRANSACTIONCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">VOUCHERNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">TRANSACTIONNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">ACCOUNTNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ACCOUNTTITLE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CURRENCY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DEBITAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CREDITAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">TRANSACTIONDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">LOANNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">TRANSACTIONCODE</property>
+                    <property name="nativeName">TRANSACTIONCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">VOUCHERNUMBER</property>
+                    <property name="nativeName">VOUCHERNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">TRANSACTIONNUMBER</property>
+                    <property name="nativeName">TRANSACTIONNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">ACCOUNTNUMBER</property>
+                    <property name="nativeName">ACCOUNTNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ACCOUNTTITLE</property>
+                    <property name="nativeName">ACCOUNTTITLE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">CURRENCY</property>
+                    <property name="nativeName">CURRENCY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DEBITAMOUNT</property>
+                    <property name="nativeName">DEBITAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">CREDITAMOUNT</property>
+                    <property name="nativeName">CREDITAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">TRANSACTIONDATE</property>
+                    <property name="nativeName">TRANSACTIONDATE</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">LOANNUMBER</property>
+                    <property name="nativeName">LOANNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from BAHL.BOOKINGTRANSACTIONTABLE where BAHL.BOOKINGTRANSACTIONTABLE.VOUCHERNUMBER=?]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+          <design:precision>50</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Nullable</design:nullability>
+        </design:attributes>
+        <design:inputAttributes>
+          <design:elementAttributes>
+            <design:optional>true</design:optional>
+          </design:elementAttributes>
+        </design:inputAttributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONCODE</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>5</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>5</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>VOUCHERNUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>VOUCHERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>VOUCHERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONNUMBER</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCOUNTNUMBER</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCOUNTNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCOUNTNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCOUNTTITLE</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCOUNTTITLE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCOUNTTITLE</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CURRENCY</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CURRENCY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CURRENCY</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEBITAMOUNT</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEBITAMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEBITAMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>21</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CREDITAMOUNT</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CREDITAMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CREDITAMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>21</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONDATE</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>26</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>26</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LOANNUMBER</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LOANNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LOANNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="RecoveryTransaction" id="6">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ACCOUNTNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACCOUNTNUMBER</text-property>
+                    <text-property name="heading">ACCOUNTNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSACTIONCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSACTIONCODE</text-property>
+                    <text-property name="heading">TRANSACTIONCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSACTIONNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TRANSACTIONNUMBER</text-property>
+                    <text-property name="heading">TRANSACTIONNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VOUCHERNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">VOUCHERNUMBER</text-property>
+                    <text-property name="heading">VOUCHERNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACCOUNTTITLE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACCOUNTTITLE</text-property>
+                    <text-property name="heading">ACCOUNTTITLE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRANSACTIONDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">TRANSACTIONDATE</text-property>
+                    <text-property name="heading">TRANSACTIONDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEBITAMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">DEBITAMOUNT</text-property>
+                    <text-property name="heading">DEBITAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CREDITAMOUNT</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">CREDITAMOUNT</text-property>
+                    <text-property name="heading">CREDITAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CURRENCY</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CURRENCY</text-property>
+                    <text-property name="heading">CURRENCY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOANID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">LOANID</text-property>
+                    <text-property name="heading">LOANID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">LOANNUMBER</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">VOUCHERID</text-property>
+                    <text-property name="heading">VOUCHERID</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">voucherNumber</property>
+                    <property name="paramName">voucherNumber</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">true</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ACCOUNTNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">TRANSACTIONCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">TRANSACTIONNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">VOUCHERNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ACCOUNTTITLE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TRANSACTIONDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DEBITAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">CREDITAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">CURRENCY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">LOANID</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">LOANNUMBER</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ACCOUNTNUMBER</property>
+                    <property name="nativeName">ACCOUNTNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">TRANSACTIONCODE</property>
+                    <property name="nativeName">TRANSACTIONCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">TRANSACTIONNUMBER</property>
+                    <property name="nativeName">TRANSACTIONNUMBER</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">VOUCHERNUMBER</property>
+                    <property name="nativeName">VOUCHERNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ACCOUNTTITLE</property>
+                    <property name="nativeName">ACCOUNTTITLE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TRANSACTIONDATE</property>
+                    <property name="nativeName">TRANSACTIONDATE</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DEBITAMOUNT</property>
+                    <property name="nativeName">DEBITAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">CREDITAMOUNT</property>
+                    <property name="nativeName">CREDITAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">CURRENCY</property>
+                    <property name="nativeName">CURRENCY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">LOANID</property>
+                    <property name="nativeName">LOANID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">LOANNUMBER</property>
+                    <property name="nativeName">VOUCHERID</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT
+    CASE
+        WHEN LENGTH(RT.AccountNumber) = 13 AND RT.AccountNumber LIKE '%%%%%%%%%%%' -- Check if it's 13 digits
+        THEN AT.BRANCHCODE || '-' ||
+             SUBSTR(RT.AccountNumber, 1, 4) || '-' ||
+             SUBSTR(RT.AccountNumber, 5, 6) || '-' ||
+             SUBSTR(RT.AccountNumber, 11, 2) || '-' ||
+             SUBSTR(RT.AccountNumber, 13, 1)
+        ELSE RT.AccountNumber
+    END AS AccountNumber,
+    RT.TransactionCode,
+    RT.TransactionNumber,
+    RT.VoucherNumber,
+    RT.AccountTitle,
+    RT.TransactionDate,
+    RT.DebitAmount,
+    RT.CreditAmount,
+    RT.Currency,
+    LA.LoanId, -- LoanId column from LoanApplicationTable
+    RT.VoucherId AS LoanNumber -- Assuming VoucherId corresponds to LoanNumber
+FROM
+    BAHL.RECOVERYTRANSACTIONTABLE RT
+LEFT JOIN
+    BAHL.ACCOUNTTABLE AT ON RT.AccountNumber = AT.CustomerNumber
+LEFT JOIN
+    BAHL.LOANAPPLICATION LA ON RT.VoucherNumber = LA.loanNumber -- Joining on VoucherNumber
+WHERE
+    RT.VoucherNumber = ?
+ORDER BY
+    RT.TransactionNumber
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONCODE</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>5</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>5</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>VOUCHERNUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>VOUCHERNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>VOUCHERNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONNUMBER</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCOUNTNUMBER</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCOUNTNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCOUNTNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCOUNTTITLE</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCOUNTTITLE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCOUNTTITLE</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CURRENCY</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CURRENCY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CURRENCY</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEBITAMOUNT</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEBITAMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEBITAMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>21</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CREDITAMOUNT</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>3</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>2</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CREDITAMOUNT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CREDITAMOUNT</design:label>
+            <design:formattingHints>
+              <design:displaySize>21</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TRANSACTIONDATE</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>26</design:precision>
+            <design:scale>6</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TRANSACTIONDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TRANSACTIONDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>26</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>VOUCHERID</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>VOUCHERID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>VOUCHERID</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="headerHeight">0.5in</property>
+            <page-header>
+                <grid id="73">
+                    <column id="74"/>
+                    <column id="75"/>
+                    <row id="76">
+                        <cell id="77"/>
+                        <cell id="78"/>
+                    </row>
+                </grid>
+            </page-header>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="210">
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">RecoveryTransaction</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ACCOUNTNUMBER</property>
+                    <text-property name="displayName">ACCOUNTNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ACCOUNTNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TRANSACTIONCODE</property>
+                    <text-property name="displayName">TRANSACTIONCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TRANSACTIONCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TRANSACTIONNUMBER</property>
+                    <text-property name="displayName">TRANSACTIONNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TRANSACTIONNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">VOUCHERNUMBER</property>
+                    <text-property name="displayName">VOUCHERNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["VOUCHERNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ACCOUNTTITLE</property>
+                    <text-property name="displayName">ACCOUNTTITLE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ACCOUNTTITLE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TRANSACTIONDATE</property>
+                    <text-property name="displayName">TRANSACTIONDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TRANSACTIONDATE"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">DEBITAMOUNT</property>
+                    <text-property name="displayName">DEBITAMOUNT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DEBITAMOUNT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CREDITAMOUNT</property>
+                    <text-property name="displayName">CREDITAMOUNT</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CREDITAMOUNT"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CURRENCY</property>
+                    <text-property name="displayName">CURRENCY</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CURRENCY"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">LOANID</property>
+                    <text-property name="displayName">LOANID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LOANID"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">LOANNUMBER</property>
+                    <text-property name="displayName">VOUCHERID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["LOANNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <column id="269">
+                <property name="width">0.7291666666666666in</property>
+            </column>
+            <column id="270">
+                <property name="width">0.7916666666666666in</property>
+            </column>
+            <column id="271">
+                <property name="width">0.8020833333333334in</property>
+            </column>
+            <column id="272">
+                <property name="width">0.8229166666666666in</property>
+            </column>
+            <column id="273">
+                <property name="width">1.09375in</property>
+            </column>
+            <column id="274">
+                <property name="width">0.90625in</property>
+            </column>
+            <column id="275">
+                <property name="width">0.84375in</property>
+            </column>
+            <column id="276">
+                <property name="width">0.9270833333333334in</property>
+            </column>
+            <column id="277">
+                <property name="width">1.0104166666666667in</property>
+            </column>
+            <column id="278">
+                <property name="width">0.010416666666666666in</property>
+            </column>
+            <column id="279">
+                <property name="width">0.010416666666666666in</property>
+            </column>
+            <header>
+                <row id="211">
+                    <property name="backgroundColor">#E5E9EE</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.34375in</property>
+                    <cell id="212">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="217">
+                            <text-property name="text">Tran #</text-property>
+                        </label>
+                    </cell>
+                    <cell id="214">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="215">
+                            <text-property name="text">Tran Code</text-property>
+                        </label>
+                    </cell>
+                    <cell id="216">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="231">
+                            <text-property name="text">Voucher #</text-property>
+                        </label>
+                    </cell>
+                    <cell id="218">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="221">
+                            <text-property name="text">Acc. Title</text-property>
+                        </label>
+                    </cell>
+                    <cell id="220">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="213">
+                            <text-property name="text">Acc. #</text-property>
+                        </label>
+                    </cell>
+                    <cell id="222">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="225">
+                            <text-property name="text">DR</text-property>
+                        </label>
+                    </cell>
+                    <cell id="224">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="227">
+                            <text-property name="text">CR</text-property>
+                        </label>
+                    </cell>
+                    <cell id="226">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="229">
+                            <text-property name="text">Currency</text-property>
+                        </label>
+                    </cell>
+                    <cell id="228">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="223">
+                            <text-property name="text">Date</text-property>
+                        </label>
+                    </cell>
+                    <cell id="230">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="232">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="234">
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.3541666666666667in</property>
+                    <cell id="235">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="240">
+                            <property name="resultSetColumn">TRANSACTIONNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="237">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="238">
+                            <property name="resultSetColumn">TRANSACTIONCODE</property>
+                        </data>
+                    </cell>
+                    <cell id="239">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="254">
+                            <property name="resultSetColumn">LOANID</property>
+                        </data>
+                    </cell>
+                    <cell id="241">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="244">
+                            <property name="resultSetColumn">ACCOUNTTITLE</property>
+                        </data>
+                    </cell>
+                    <cell id="243">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="236">
+                            <property name="resultSetColumn">ACCOUNTNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="245">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="248">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="resultSetColumn">DEBITAMOUNT</property>
+                        </data>
+                    </cell>
+                    <cell id="247">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="250">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
+                            <property name="resultSetColumn">CREDITAMOUNT</property>
+                        </data>
+                    </cell>
+                    <cell id="249">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="252">
+                            <property name="resultSetColumn">CURRENCY</property>
+                        </data>
+                    </cell>
+                    <cell id="251">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <data id="246">
+                            <structure name="dateTimeFormat">
+                                <property name="category">Date Picker</property>
+                                <property name="pattern">yyyy-MM-dd</property>
+                            </structure>
+                            <property name="resultSetColumn">TRANSACTIONDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="253">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                    <cell id="255">
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="257">
+                    <cell id="258"/>
+                    <cell id="259"/>
+                    <cell id="260"/>
+                    <cell id="261"/>
+                    <cell id="262"/>
+                    <cell id="263"/>
+                    <cell id="264"/>
+                    <cell id="265"/>
+                    <cell id="266"/>
+                    <cell id="267"/>
+                    <cell id="268"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">bahl2.png</property>
+            <property name="type">image/png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAAdAAAABtCAMAAAAmoMAtAAACTFBMVEX///8AfEgAekUAeEIAfkoOfkwA
+                dj0CZTQAoloAqGAAczsAfD8AeT4DbTgAf0Dn8ewAkU7z+fcAjEoAnlcAdDkAmFN4sJQ5jmTl7+pOmHMA
+                lVG82MoAhUSSvKeFuqCdx7MAbSvG3tPX6OBVoHwpjmGozLru8/AWhFMAYzMArmRRm3bW5Nyv0MBrqYoj
+                aTbbsGje2NTQiTDs6ug5aD4SpmXimShBkWltq43FeSxfMBrroCdhooH/+vPwpSXVkCrYsYH4qx4AVyrA
+                ojqhcDDEpJd6bDMAXDtFkU8teEAybTPOm2bNuqzTybvFqJHKsYvJjUG0ex69eRO2nom4j2q4nXSvfUO2
+                jla6agDGgQDdzrnVvJq+gECwfzeyiGXUvpijgFO5dTm6gU+vk1+pZh6/hyini3Ln4NKzcCOyoo3IoYC+
+                ol7DlgDNtXvNvrLUzMvUvaikhU/i0rKjbkPQsVawjW/ttFaTWDe7qqj75rnosABZnEiabWL0z4fFqidS
+                f0F5aEadnC9Va0Tw28NUq1FzmUZKqmtSVS3nvI2hsD+YlmqZizq6rTOfhEWrpmeAsW6QciNuaTVvgDdO
+                YStgj0qJl0SEpVeimk9ehl1/RBpxXkCCaDLpiCbTcylLPR+QUR5+mmFdWSkyQSKHdiikUCdvSyBrhkTY
+                pZqeTyjEdWK/kTatdEqgVSRisn5cJxm6vW5SNCBtLSHqtD2VTThGWS5objB2YCQeSh7tky56TBScdhaH
+                rE1OaCOTTABghjfZr1CKhUe+k0VgbyN3f048VRVwOIsRAAAZcElEQVR4nO2di18aV9rHGWAGuQw3EVAE
+                AqIgAgoKEiAkSIyouZg02k1iKlGjic3FTVK3m/a1jc3lrYuJUaupTU1i9M0au91tQzS7fVtd9x97z9xg
+                QBRruovmnd8nyQwwnDlzvvM85znPOUNYLEaMGDFixIjRf0bNZbmuAaPfVIdd2L8M1d0u15GmpiOAZRXr
+                KLDSymNNVbmuEaO3kavl+Ikrl9+76Dp58WRVa1tz83vvH851nRi9hU787rLr4pGeqv2nLjf3H67qcbFO
+                n5HlulKMtq+21rKL7c1nr7o+ONxRdaS1N+piHXflulKMtq+2i65zR3pYzaddnVfOXnC5uqpY7zNAd7Eu
+                NrEu/q77NKvnA9fZKpeLdV7mijKR7i7WlRZZc/fB8yxWz8mqy+ddV4+wTt3IdZ0YvY26ev7Q0nvBxXL1
+                BIBl9vS6LjLjll2t5rNnr17pO/Hh0csnWlqrWGerOnJdI0ZvJdfZq80H+5ovHbt4vvny4avNVZdzXSNG
+                b6fzZZev9PVcPnny1I3oqcNVJ5gYd5erysW6+mFlp6u5v+rG1cOuC7muD6O3lOuCq/Ni99G2CyzXjQtV
+                LCYk2u1ynbxxuGf19y7X1RvNR0/15Lo6jN5WrmvnL/X9/ujJk80yV/P7N5gudLfroOtIy/7jHwRYgSMd
+                J670nMx1fRi9nVzX25rPnak6cfbcjSvYNMvFXFeI0Vvq6uXW97xNAZfL1dzWudp0Ntf1YfR2unz0Rmfb
+                hYPhjo6TV5qbL19motxdrqrOyywsECrDp7VlR5nZ7XdLTJD7rugI42vfJQU+ah/4Q64rweg308d/vJkf
+                GfiE8bfviD79r3z+YDH3s0+YqbN3QYGPPs/j17UOROS3rp3IdWUYvbWGnLdrvvjhNv/O2btStL+Dcbu7
+                XPe6i/j//V9f8IG+HBAK19qYCdHdrEDlcA3/T3/K4+P6rn+wuDp2njHSXauhYz/XfPHhBIGTn5dXM1Jf
+                DNzulVzXi9H2dK+lofx2980ET6D7bY3iW61MbLQbFWh6kMcfHs4rT+LMy8+/0zkqdvSfZfJGu049Zx7y
+                77Sv8Ok8MaI1T6ZFgs9am3NdP0a/Tqffbygf7x0vp/tbjCfQnbax4ur+G8y8yy5SoOnveeXD7fkpPPMJ
+                ngUF+SPTIvSzViZvtGs0dOwhPz/hbtN5At3vH0Nu9Z9gjHR3aOh4Q/nN3nF+irul8SwqKgKxkcjR38HE
+                RrtB91ryyid6C8rTgNJ5FkmlT/od6Forkzfa8QocG+bzF4b5SZ58fg0pGk+ptKEzrqiOMQt1d7iGum+W
+                3+weT/KsufPVxHBsNQY0OXH/zh2MqHz8jlQql45MC3grHcyvouxk3evOL7/dXVBO8sy7XfeDzx0MOrud
+                XqcXU/izKVMNujwFgMrl99saUSZvtIMV+Ohzfnldwt02fO72HXcGg8teb7Sra2ZmpqtrEWwffX0rbJJj
+                KpaPTCssHUxstEM1FLxZ/kXwNmmeRcNuZ6/T983jma9foRw2W8ThoLzQs2/nZt60tK95gIUWAz3paERH
+                mbzRjtS9loLy2ws3SZ6Dc+Gn085voqMReQExZMFHoNJiJPSs65iz/YkUB1o83jmKVvefZH4aZacpcG6W
+                X746nEfyFMW5BZHHz6ul+Xl5tPGKFPs733FoLupcI4ACI23lWVb6mNhoZ+nw88Hyhq758kQ4xOfLo6NF
+                1ACU4olJXj8nLQ4tiQicYrF4vC/Ou9V3kskb7SD9z4uG8nnwNzFa4fMLRiNUOiGFp1QuFMnllHliQIUN
+                I8OoY4WJjXaMAn+e45dPDxSVJ4Hm8YuL+bT0EJ5PwIkS8S2Np1goEn3VN2b5jFmLvUMU+HO8vOj5aDmN
+                J57vKxiMLawMJvN9pMelARXjPIVCkaKh/1vB3U/+bVVUS/5tRWeTcV1XIjNSe7++Wsbsh2BH/apy1/d1
+                F001LyN0nnj2tmg06HO7H9cXZbFPwFMkUkzNiaY3s1AZTb+mtthXDSVsbZZj9KmFbnqytA83O1St8Sgq
+                0t4zcCE7tpVoShD9BjXeoEy1CfJs4er9EGzIfhR5KoNfsQ7/x0/KRxrSeUrr9zm9Uadz8ZqUiG8JmGk8
+                hQRPRPTZK2Rgk07UqFN6cFn9Vqu/Vv8rbkFdIQdib9BylCrYmkxnK7QrM7RMqdJKVEWJfUmitBM1q9Wl
+                t7W6VoXASDpQLQdmg43Ss2G1ZFodcQa/MvVGMyDw+tZfLxHMyXK9iTPpVGwIWVdkYLXm/koaz4K1ruNn
+                FhcXvWeeT4PBChh1Rlbq6uLilHCIsk8E4QxYpj7Z/OYDDQF5DEaJxGiw72H7t+Z8gAxGK5wNqJJTmOFs
+                5o3uc3UhBLP9iXYo5YJjNesPAzU1rwdq4CB+bKP2bFItoxmCObp1BZoQ0xYstBbhbNFCy0pLQQ3X3yOV
+                35X3pXSfeXnCMy8f/WXGu/eve1+8qC6QNrZHo15vMNg7luZuhRhOkeLWnGL0YJazK2BISe5qYEixZa/C
+                KmVnAVrGhjlpN4jRDEPrGjShCiTlC36I8KLrpYTWAWWpbQQU/WbVsnNh0/qGlpVuyTVpEm0jy3rf12aw
+                UNbHa+XfF6fwLHjodAZ9PrfXO/PXvc8KIgv1SOivAwN737xB0nkCoIhg9C4yk23YgiSBAkaZrncD2ThZ
+                gOrZ6+hJVJuZtZoNc9XJl3Zusmap0rLXA91StZQQvJXuMptKN74pSekyAQ301dx/mDKbXTTrPHbAfcC9
+                7Iw+8lYXjbWLwfgT5SHiVAMVkTwFAw7By2yn5tKAygphTrZAJyFNNqAmGIbNqc1XtjlQbgpQJbQdoJtW
+                SwfBhb8BUHPWRtKxMwBlNQGfm09fnSCNRa+534TnupxnHs38JF3yNlIBLkYyladAIIgMoGvZPG4KUJYW
+                XPBWryobUI1CCe6P0pT33g2gWkVWoNqMQIeAz22grzYRdofnugHQN87o3F8ai0Sj3q5hoAcLC8FgsHs2
+                QoVDBE/B2lNBLOsTEqlA2Vt3SdmA+hUyPSet/d4JoOAM27TQQAfuc5Orh4Tt4b37fEHv8vJAV2+9VCp0
+                PJ0Oh8PT09NPn85N93rjYjIeIoDGQpFw1uqlAAVjLQ+1b9Aq/UoNNWEjq8Bi/TKNMjHkoFrOqAaqqEhv
+                pwqOnSUBMVBKlLVtoGU2nd2uo05CADXqanXJ6KRMo6dVS6Kv1WWI7zIDlVVoyTfLDABDmd5eS0RYaq1d
+                mYyzjXq8cjYssCuTkBWVGUAtbDR4klKtvmIDC8VyC7ECfnI1GNvp/NsPvjPhZe+c1906io1WxMAehbgE
+                oTdelAqHMEVaeYPZf5KKDtTIhdnkC0mJokQLokkT3ixleisCwiWNScFmU16UAqrnIAou2QI01WJBPmDi
+                p7+5XaA2M6TUWhGOlTgLDlRvBkNOtp14x6hTIeZktQzYZ5wSNStNmYBKtIUcDn7fqnUqhYZl4yo4EMcD
+                3tFxsD2iDrJSP4QPW5QIjMUGXBF+L6k9Hl0JBzFTPYtMB9XatLDVn2nYwmKdWuOPNPATPPPF7dFHbl84
+                vBydizrD3sfRuBAfgYqFkfmIGPnWOyZM8hQMTqOx7PNnNKASDxj5EY1QZkJ0+AbCrtVWCAZwKpmOrdSq
+                IGoUnvBtheuHduBKzSqsnRWwmd6q2wRaykGw5tOzydbFgOr2QFwODLNVGKBaP6igKVEt2x6Ei0AwxE5v
+                1AxA9SUeEFyDi1RbTQjMNehVWpsOhsGZSjx6m5INK2xYqYVWDvgQaySJjQ3pZBK8aBsXq5dRBZO9qsSM
+                v8EqZGcGGmituV+f5Jkv/do503ugO+wdeLQ4E/UGfcve8OzKSuwMtrYoXD29fCvRfwoEaOyVoDX78j8A
+                1G8EqtAoYRgykX5Kx4Y0RKNy8K2EC6vsSqwtSiCyB6GA6ti2DMVq8XZgAYD0/iY7UGMyPVdLAZWZIByW
+                BGxxHKCrt5aAltOA24sMyzXcBFBYVQj8hdoPRk3+tDNkdLlgcMwlepYSCLbi1daA26MEtzow9iLdgpkA
+                Su9DK8h3DByia5GZEA1VZEagwOfe6c9PLr8tuhucmekK7x3Yu+gdADz3Hdi3vOx0Lrt9QGCnnZe0TxSN
+                Wea38L9/cGGYawYCjgaG7VSX6YfYeF1L2Wz8umQqGKI4QrXUdQE2MiWSIZsDilXhRZVCsJn2blagsCeh
+                QjPlO9RmEpYVMpNASVTANmAV3nJGOAnUQ7SlHdBOc7oZgYLBMQkUlEvUDozfIOI2BWjMxIfW9UBLyICj
+                DFQVaxQdQsJnFW4AdGiKPxJJzpdJR73B9sW//fhjV6/vmtO9z+fbtw/843MD+fb5nNV0nvPX0JUjGzZe
+                QpSFGm0lCGRSklGGTUE0nYE0Q5kHNhMfGSGoREZel54l8+/JmFuyKQg3LDPDHBrw7ECtJQmZEp1ByR6i
+                ND9EtLyWTXkFDQJz8ICXBpT6VoaTZQRa5kkCJZkB70BeLqDNocw3HagRskuwiFBiNEOQCnO4CXfkz5RY
+                AAqEa+7Hk/Of0rj3h5mgM+p1H2uZCfoOEDiBnbrBsMXnexyn/C0K9DCOtm9hwTW9D/VzIEXKSEHjJ1Pd
+                skLqCo1cyJoAKjObM2fBCrlku+lSwqLsLpfWDLSgiIg59SY4AZSMQmRUgRmAYueuTT1DRqAyOlANdW44
+                ARTZCKiNbTbhUmGTCjLw9cTNa98AKKvpu7yXBcn57EYA1O2LBt3RvV73AQyoO+gGQLFluj6ft57GE+1z
+                RNq2MOZKyRT5ubQGB5GjXUfNXSSBmhNAIaWKXZKx0ArEU2rDpQUl0sYW2x6HyjQlHl3hOqDYQbj1ZgIK
+                dtM60SxA9b8OqBZRpkzzWaFE+n5DoEO3ajqFyeUmkfYfBtzuaND7osuJGaYbM02MLPC6AOhowt+iaGTV
+                shWPmzoONYJ+FCJ21XauvSLhcjMChUusUOZcey1bZaZEL3/bQDUqs76M7nIpoKDbww/KBNSI/HuBKjkp
+                kwfAW2QHiuUW4snlCeJXL566nU5ndBEzUIxmEFs5vwxsFfSh3rGkfaIr9ejwVtYTpQAFoRw54WGDTNh2
+                U6BQbRkEZ4qJ1LAqsa+nJ/y3CVRWS3SiGYESrZsJaBnCTZuu+Y2Bsj30crDuNqvLZb1nqumQ5iceRxLe
+                HQt6fTOPvE43cLNO/EmI6MCLb3D364wneaKT1ZH2zEWmKhWoFSbuMj2biHKzAMVGC9D6XlRHoyzh0BK6
+                snSgKfmIjYDKCjnEDZIRKNGImS2UneY/0oFKsO9u3+Wy4eS1S1IubmOgQ2v5Iw20x8vEz3qji4td5EMt
+                gObizMDi4gBG1LccdfBQSqu8+S393wKpQD0wHm9LuBDRhNmAYi7Pk151mVlFazUwuEvYazpQWcotvhFQ
+                cA4iqM0AVEmmQjL3oUhaCJ4OVIuPHrcL1MZOTthK7NhYJRGEbQw0MI353ORyzeK7zkczGMkfH/344vnz
+                519/++K513t37vEysFhv14yD5DkYtgxv6fH8FKDAnPB2AVUlop2sQLERa/o0tE1Bh1bKTiZ0012uLcWC
+                NgKqokaA64HKTOTZMwFVspOen1AaUBk+Rt42UHDOhCvS6bCxTiIvtjFQ1n7TnZg8sbpPygl7oz6n9/HA
+                0tLS3Vc8gRB91uX0jqKhuYEZZ9DdThlo7FWkdUtPQnDoQIE14Y0PIJjJFsAqr94EKBhpspWpRZrM9IuR
+                cZIZmzSghtTlKGooBWgiU2QikxpGD8wuwyqTBKpByG9kACpRrVt/oUud4C7Bj8wMlLsJUDwSNOJzGQhR
+                ET1WDSxhREb9AOhGqxqG1gpGIgn7HI87o2639/mAI7F8CJ12djurEQEaag8G4wmgofn3NigxVbQlKEYr
+                RLY3VjWlDLQguFZ7md2A+UoSqNoMEw61lHQ4Bjht9VQpkhpbmuBE9Ccx0W8fG5xqQUYqS0AI2CNhfeDO
+                Bz26TK8ygaijojAZ2mLMSAIGLnkLahCYSHywlMi6CFwJ0XLL6kIyrQmGt+Q3IIgszk4HSnwj4ScqENij
+                Ztlq8TQSzFUpS7WFRC7XDpwRnmwrhbGUZ2aDCsSAzyWBFq+4vd7gPmf0a5RYniAanI/MO4PHul+BYCi0
+                4HZSHrcReNxTGctLkw04WZVObzPYtH6Yw6amDTzAVD1+bmkFG3ysxVeHkP2YAXxSQTYOwaMQvEObx64w
+                Q6aKFL8GhkIeonlsXBg260r1en2pVmmF0mIWEGTQMr9qcCMQ3TOABcNWj0mN+TSVESsGgvwyzGQTx2uB
+                seAnNZrZ+NlkSkWa48BnH4C3wE+v19nNZGYYFE/ccDLKFWCM2YnUH3GPg96IvMoyM6Dox+9vDQRqBrHZ
+                HOIeKlOBplAptVaTH5D2bzCbC3xuP7maunh00esDDvcWtdrE4faBcaiz3iIQOIJgUEoB5a3V8xayD1oq
+                dLUiBdAeXIipNjGxJylUcBQmYBYeBbgetdKMHWbVs2x+BOxAdoOucA/YMfnLWEqT2WQ2W8lwQGY1g5dc
+                E9W3SGpNWDrFbParK5TKPcmz7QH79LShQa/E5nEVVi0eeer1KgV4ZdbpsdkeLtgFHsOgUBB3hrGWo0AK
+                rXuouYRSP1ayWYnZkkQHKRSqEm76nIFMqzPTzw/2MP9osGJNwPZXyJRc7MMSLavCziUvV2PHLldRaFDX
+                Yi2wx4+XaRAhAtKADWaEw+YgSmo+1SMArxQeiVbB1W7ocwcLRtAiYjm1KPStM/h4gFquicTxJ7mrBcDh
+                VnvBKCZM8uStOub3Z+W5qYwGAu7WlwG+ncqMagkmNbFA3Ui8VKvxNfIyDdmBJxvJaCvVbBR3GDWlti0v
+                SN2ODMlWAfWgLxo06LV6cGpDxhkLQoGY9H6cXB0vL0aq5+5GqOXUIsdodOZaNZ5O4C29npl2kDwjq6HJ
+                raSJGOVCTeail/LE4w7YYrDkck0sjUCl+3jUIJTHezhrWWB+CWWnamitqFMklac+LZhcDkbLx1M8LZNj
+                6DHmydCdqkCH9MlTgqfcQSzWLG4keVYTPNlLBEvOEsAJgK6GtpSYZ5QbXYTvxIpx+2yoR4nHs2MoAIog
+                DTEUA4qOv8bdLW981IJZ6PwDyxZWEzHKlYbW5J0RebF8cGnyw6UlhxjfvgoJ55cmu5+9CnHml65/CLaR
+                saXJhWfPQsDjPnVsKTHPKDcKTEu/igMD/e7TPx74Ji4SW8F2eVSgwLbOUVSAb5/yUD+xBYMWy+DW0kSM
+                cqP9cMMkFtyqPlp+IwDxkNW9/AYVIYrCj5bneCAe8oAt5msLfctvLDyeozXEeNwdqJ7TJ4GuVgGfOy//
+                Hgw+xU8ePHkvBOLbJ+EnbSERIgCv20IAKHjdEUJ56JfhLzuAx12r57W6WGWnPrh06dLRU8zwZWeop/L4
+                8O3bt7+aiHVUBVbF9x8CC/UAd+sA8a1KgHgciACZQgVTWC5hiocSWwtvKsTjxZbGzrKuLv594h//+MfE
+                ZPv5XF8KI0yVPwmE0oICqUgw3s/ab27oJ9NDxONliCLD8JOUI2ypb+75X4VQXlBQJEZEMeZ3UHaC7r2u
+                bwREpD8P13XKhsbknWgx/Wn7dTyTROenQ61VgWtzo6KCgoKGeKyXAboTdPr1+GS8oODzutvfnwRxrvjJ
+                mHBjmBRLC6b6sWoQ40bjK9cEBUUts/PtzG9P5U6B0xdOYzpyten1w1/C4ppfZuPX246cPoPKKxfqcC0k
+                1N7eHg5fuzYzMxMOh1dXV7GXQF2hL18evNj1tP7M3aKRY/GV7vNHDuK6wJjqf15D3RMTE5PDKysrExPz
+                w6I717+amAQvViJiMfUDJxGaUMd68SxT9fX1Kyv1a9PSkQfYl+tx9bcwY5kcaL+I+uUhufC64M4kVygS
+                NzQ0CBPdZ4STXE3taMQdrqORx2t0YC63EQuKwEvc91YDoK+wHcIdzzLp3VwoEJNTP/ZWfB2tmTQXi3/6
+                088rI0Ly12ocdYMEz5UnKBq/jo1WeGOrvOq6QQBtadVh4b2q/vsUzhAAvTSWCH7HzjDzLznRUJxcngCA
+                OhqmzcXFketCdMEcGWxQDP48jk5GBiOAJ2+2D0UbJ3lYRNQ4aQnVHXKMTYWG5+ctg5HZJxMOHGjx9wmg
+                jpaeXF/Z/1MFXnKoX+/7fqFymguA/hKZnURXGkdCdY11cGw+jgJ/+5NjQYVW9/F4GNDrjT91Hxodu35o
+                Id4+NTs/O1nfaeFZqlf7Pl2i4t+VLS27ZvTb6950Yr1J36kAlk9wrAocqw0//bPPMokuwA9WYWx5wmz9
+                m070VRvGE1hoKNTOG/tn3aFh3thIfH52KtQBGFZfCnz8LwroVB8zesmJhlrkiR9k7KsKdHDFYseqEK0b
+                7OP1WWLsMBwb7QT95tggGjoTWWrjWW7xeP8CLjd6qLW67lDs0GxjfP7B1NIKgDh1iZUAyrOs9TE/QZ8D
+                BVqKqeVDcnkMAAXR7Vi4fngQBQOP6lj167XpW6/XgIHOo47ptbEH0w8GeZZ/Dle/ml67OxtvfBUbC8Uf
+                hurjILS1pADlhRinmwMFjq01EIpEGsbbXayzjZGN1BhxNNKGn42N4E+KJo6yembxYxqxf6rDzH+K9h/X
+                UFNTZeUvv1RWNp0713TsFIvV03SuCVNlZeV1TJUpwj9qOveSOCBVn376qYvF+j34+M94EaDAa0w3yogR
+                I0aMGDHaBfo/5VC3dyY+V9AAAAAASUVORK5CYII=
+</property>
+        </structure>
+    </list-property>
+</report>
