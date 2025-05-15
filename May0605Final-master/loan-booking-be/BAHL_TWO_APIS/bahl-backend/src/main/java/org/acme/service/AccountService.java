@@ -34,14 +34,7 @@ public class AccountService {
     }
 
     public boolean reverseAccountBalance(String customerNumber, double amount) throws SQLException {
-        Account account = accountClient.getAccount(customerNumber);
-        if (account != null) {
-            double newBalance = account.getBalance() - amount;
-            accountClient.updateBalance(customerNumber, newBalance);
-            loanLimitService.updateLimitBalanceByCustomerNumber(customerNumber);
-            return true;
-        }
-        return false;
+        return updateAccountBalance(customerNumber, -amount);
     }
 
     public String getAccountTitle(String customerNumber) {

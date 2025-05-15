@@ -893,119 +893,129 @@ from BAHL.ACCOUNTTABLE]]></xml-property>
                     <property name="backgroundColor">#E5E9EE</property>
                     <property name="fontFamily">serif</property>
                     <property name="verticalAlign">middle</property>
+                    <property name="height">0.3125in</property>
                     <cell id="477">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="482">
                             <text-property name="text">Tran #</text-property>
                         </label>
                     </cell>
                     <cell id="479">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="480">
                             <text-property name="text">Tran Code</text-property>
                         </label>
                     </cell>
                     <cell id="481">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="496">
                             <text-property name="text">Loan #</text-property>
                         </label>
                     </cell>
                     <cell id="483">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="486">
                             <text-property name="text">Acc. Title</text-property>
                         </label>
                     </cell>
                     <cell id="485">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="478">
                             <text-property name="text">Acc. #</text-property>
                         </label>
                     </cell>
                     <cell id="487">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="490">
                             <text-property name="text">DR</text-property>
                         </label>
                     </cell>
                     <cell id="489">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="492">
                             <text-property name="text">CR</text-property>
                         </label>
                     </cell>
                     <cell id="491">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="494">
                             <text-property name="text">Currency</text-property>
                         </label>
                     </cell>
                     <cell id="493">
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <label id="488">
                             <text-property name="text">Date</text-property>
                         </label>
@@ -1020,65 +1030,65 @@ from BAHL.ACCOUNTTABLE]]></xml-property>
                     <property name="height">0.4270833333333333in</property>
                     <cell id="498">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="503">
                             <property name="resultSetColumn">TRANSACTIONNUMBER</property>
                         </data>
                     </cell>
                     <cell id="500">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="501">
                             <property name="resultSetColumn">TRANSACTIONCODE</property>
                         </data>
                     </cell>
                     <cell id="502">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="517">
                             <property name="resultSetColumn">LOANNUMBER</property>
                         </data>
                     </cell>
                     <cell id="504">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="507">
                             <property name="resultSetColumn">ACCOUNTTITLE</property>
                         </data>
                     </cell>
                     <cell id="506">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="499">
                             <property name="whiteSpace">pre</property>
                             <property name="resultSetColumn">ACCOUNTNUMBER</property>
@@ -1086,13 +1096,13 @@ from BAHL.ACCOUNTTABLE]]></xml-property>
                     </cell>
                     <cell id="508">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="511">
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
@@ -1103,13 +1113,13 @@ from BAHL.ACCOUNTTABLE]]></xml-property>
                     </cell>
                     <cell id="510">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="513">
                             <structure name="numberFormat">
                                 <property name="category">Currency</property>
@@ -1120,13 +1130,13 @@ from BAHL.ACCOUNTTABLE]]></xml-property>
                     </cell>
                     <cell id="512">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="515">
                             <structure name="dateTimeFormat">
                                 <property name="category">Unformatted</property>
@@ -1140,13 +1150,13 @@ from BAHL.ACCOUNTTABLE]]></xml-property>
                     </cell>
                     <cell id="514">
                         <property name="borderBottomStyle">solid</property>
-                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderBottomWidth">1px</property>
                         <property name="borderLeftStyle">solid</property>
-                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderLeftWidth">1px</property>
                         <property name="borderRightStyle">solid</property>
-                        <property name="borderRightWidth">medium</property>
+                        <property name="borderRightWidth">1px</property>
                         <property name="borderTopStyle">solid</property>
-                        <property name="borderTopWidth">medium</property>
+                        <property name="borderTopWidth">1px</property>
                         <data id="509">
                             <structure name="dateTimeFormat">
                                 <property name="category">Date Picker</property>

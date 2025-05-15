@@ -1031,7 +1031,9 @@ ORDER BY
         </oda-data-set>
     </data-sets>
     <page-setup>
-        <simple-master-page name="Simple MasterPage" id="2"/>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="backgroundImageType">url</property>
+        </simple-master-page>
     </page-setup>
     <body>
         <table id="6">
@@ -1346,7 +1348,7 @@ ORDER BY
                         </label>
                     </cell>
                     <cell id="26">
-                        <property name="backgroundColor">#E5E9EE</property>
+                        <property name="backgroundColor">#00921B</property>
                         <property name="borderBottomStyle">solid</property>
                         <property name="borderBottomWidth">thin</property>
                         <property name="borderLeftStyle">solid</property>
@@ -1450,6 +1452,10 @@ ORDER BY
                         <property name="borderTopStyle">solid</property>
                         <property name="borderTopWidth">thin</property>
                         <data id="66">
+                            <structure name="numberFormat">
+                                <property name="category">Currency</property>
+                                <property name="pattern">###0.00{RoundingMode=HALF_UP}</property>
+                            </structure>
                             <property name="resultSetColumn">ACCRUAL</property>
                         </data>
                     </cell>

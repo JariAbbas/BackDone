@@ -236,7 +236,7 @@ public class LoanApplicationResource {
             LocalDate grantDate = loan.getGrantDate().toLocalDate();
 
             // Only Status 1 (Unauthorized) should proceed for this cancellation initiation.
-            if (loan.getStatus() != 1 ) {
+            if (loan.getStatus() != 1) {
                 return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorMessage("Only unauthorized loans (Status 1) can be initiated for cancellation. Current status: " + loan.getStatus() + " for Loan Number: " + loanNumber)).build();
             }
 

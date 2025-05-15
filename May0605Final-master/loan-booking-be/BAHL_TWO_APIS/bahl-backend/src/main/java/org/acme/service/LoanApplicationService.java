@@ -126,7 +126,7 @@ public class LoanApplicationService {
         );
 
         // --- MODIFICATION START: Remove account balance update from loan creation ---
-        // accountService.updateAccountBalance(customerNumber, loan.getDealAmount()); // OLD LINE - REMOVED
+         accountService.updateAccountBalance(customerNumber, loan.getDealAmount()); // OLD LINE - REMOVED
         // --- MODIFICATION END ---
     }
 
@@ -248,6 +248,7 @@ public class LoanApplicationService {
         // loanApplicationRepository.updateLoanApplicationStatus(loanNumber, 4); // OLD LINE - Status 4
         loanApplicationRepository.updateLoanApplicationStatus(loanNumber, 987); // NEW LINE - Status 987 (Rejected)
         // --- MODIFICATION END ---
+        accountService.updateAccountBalance(customerNumber, -loan.getDealAmount());
         return true;
     }
 
@@ -330,6 +331,7 @@ public class LoanApplicationService {
 
             loanApplicationRepository.updateCancelledLoanStatus(loanNumber, 9); // 9 = Cancellation Authorized
             loanApplicationRepository.deleteLoanApplication(loanNumber); // Delete from LoanApplication table
+            accountService.updateAccountBalance(customerNumber, -dealAmount.doubleValue()); // Increase balance
             return true;
         }
         return false;
